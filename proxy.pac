@@ -4,7 +4,7 @@ function FindProxyForURL(url, host) {
         return "PROXY localhost:8080; DIRECT";
     }
     
-    if (shExpMatch(host, "(*.nnm-club.me|*.rutracker.org|*.slideshare.net|*.slidesharecdn.com|*.linkedin.com)")) {
+    if (shExpMatch(host, "(nnm-club.me|rutracker.org|*.nnm-club.me|*.rutracker.org|*.slideshare.net|*.slidesharecdn.com|*.linkedin.com)")) {
         return "PROXY localhost:8080; DIRECT";
     }
 
