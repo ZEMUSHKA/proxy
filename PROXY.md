@@ -13,6 +13,8 @@ acl authenticated proxy_auth REQUIRED
 http_access allow authenticated
 ```
 
+`sudo systemctl enable squid`
+
 # Dante socks proxy
 
 Install: https://www.tazdij.com/post/setup-dante-1.4.1-sockd-dante-server-on-ubuntu-16.04
@@ -55,4 +57,4 @@ sudo useradd --shell /usr/sbin/nologin user
 sudo passwd user
 ```
 
-Run with `sudo /home/zian/dante/sbin/sockd -D`.
+Add `/home/zian/dante/sbin/sockd -D` to `/etc/rc.local`.
