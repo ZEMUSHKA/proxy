@@ -1,7 +1,7 @@
 # Squid http proxy
 
-Install `sudo apt install squid`.
-User with password: `htpasswd -cb /etc/squid/passwd user password`.
+Install `sudo apt install squid apache2-utils -y`.
+User with password: `sudo htpasswd -cb /etc/squid/passwd user password`.
 
 Config `/etc/squid/squid.conf`:
 
