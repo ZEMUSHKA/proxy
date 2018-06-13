@@ -15,6 +15,23 @@ http_access allow authenticated
 
 `sudo systemctl enable squid`
 
+# Squid httpS proxy (proper fuck for RKN)
+Compile with ssl (this is slow): https://imbicile.pp.ru/ubuntu-16-04-prozrachnyj-squid-https/
+
+Generate certificate: (https://busylog.net/squid-ssl-certificate/)
+```
+openssl genrsa -des3 -out squid-server.key 1024
+openssl req -new -key squid-server.key -out squid-server.csr
+openssl rsa -in squid-server.key -out squid-proxy.key
+openssl x509 -req -days 365 -in squid-server.csr -signkey squid-proxy.key -out squid-proxy.crt
+```
+
+Change the config:
+```
+http_port 80
+https_port 3128 cert=/home/zian/squid-proxy.crt key=/home/zian/squid-proxy.key
+```
+
 # Dante socks proxy
 
 Install: https://www.tazdij.com/post/setup-dante-1.4.1-sockd-dante-server-on-ubuntu-16.04
