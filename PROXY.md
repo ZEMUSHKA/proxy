@@ -30,6 +30,9 @@ Change the config:
 ```
 http_port 80
 https_port 3128 cert=/home/zian/squid-proxy.crt key=/home/zian/squid-proxy.key
+forwarded_for delete
+via off
+dns_v4_first on
 ```
 
 # Dante socks proxy
