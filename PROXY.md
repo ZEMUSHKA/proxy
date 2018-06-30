@@ -6,7 +6,7 @@ User with password: `sudo htpasswd -cb /etc/squid/passwd user password`.
 Config `/etc/squid/squid.conf`:
 
 ```
-http_port 80
+http_port 0.0.0.0:80
 auth_param basic program /usr/lib/squid/basic_ncsa_auth /etc/squid/passwd
 auth_param basic realm proxy
 acl authenticated proxy_auth REQUIRED
@@ -28,11 +28,17 @@ openssl x509 -req -days 365 -in squid-server.csr -signkey squid-proxy.key -out s
 
 Change the config:
 ```
-http_port 80
+http_port 0.0.0.0:80
 https_port 3128 cert=/home/zian/squid-proxy.crt key=/home/zian/squid-proxy.key
 forwarded_for delete
 via off
 dns_v4_first on
+```
+
+
+```
+sudo systemctl stop apache2
+sudo systemctl disable apache2
 ```
 
 # Dante socks proxy
@@ -91,6 +97,7 @@ sudo apt-get update
 sudo apt-get install docker-ce
 
 sudo usermod -aG docker $(whoami)
+# logout
 docker run hello-world
 ```
 
