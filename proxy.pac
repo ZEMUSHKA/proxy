@@ -8,6 +8,10 @@ function FindProxyForURL(url, host) {
     {
         return "PROXY localhost:8080; DIRECT";
     }
+
+    if (shExpMatch(host, "zian-nix|zian-nix.yandex.net")) {
+        return "SOCKS localhost:1234";
+    }
     
     return "DIRECT";
 }
