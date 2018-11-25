@@ -4,7 +4,8 @@ function FindProxyForURL(url, host) {
         || shExpMatch(host, "(*.nnm-club.ws|*.nnmclub.to|nnmclub.to|nnm-club.me|rutracker.org|*.nnm-club.me|*.rutracker.org)")
         || shExpMatch(host, "(*.slideshare.net|*.slidesharecdn.com|*.linkedin.com)")
         || shExpMatch(host, "(*.telegram.*|telegram.*)")
-        || shExpMatch(host, "(*.transloadit.com|transloadit.com)"))
+        || shExpMatch(host, "(*.transloadit.com|transloadit.com)")
+        || shExpMatch(host, "(*.sci-hub.*|*.sci-hub.tw)"))
     {
         return "PROXY localhost:8080; DIRECT";
     }
