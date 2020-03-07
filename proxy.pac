@@ -11,8 +11,14 @@ function FindProxyForURL(url, host) {
     if (shExpMatch(host, "*.rutracker.org") || shExpMatch(host, "rutracker.org")) {
         return "PROXY localhost:8080";
     }
+    
+    if (shExpMatch(host, "*.nnmclub.to") || shExpMatch(host, "*.nnm-club.ws") || shExpMatch(host, "*.nnm-club.me")
+        || shExpMatch(host, "nnmclub.to") || shExpMatch(host, "nnm-club.ws") || shExpMatch(host, "nnm-club.me")) 
+    {
+        return "PROXY localhost:8080";
+    }
 
-//     if (shExpMatch(host, "(*.nnm-club.ws|*.nnmclub.to|nnmclub.to|nnm-club.me|rutracker.org|*.nnm-club.me|*.rutracker.org)")
+//     if (shExpMatch(host, "(||nnm-club.me|||)")
 //         || shExpMatch(host, "(*.slideshare.net|*.slidesharecdn.com|*.linkedin.com)")
 //         || shExpMatch(host, "(*.telegram.*|telegram.*|*.telegram-store.com)")
 //         || shExpMatch(host, "(*.transloadit.com|transloadit.com)")
