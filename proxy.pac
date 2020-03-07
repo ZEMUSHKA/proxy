@@ -14,6 +14,10 @@ function FindProxyForURL(url, host) {
         return "SOCKS localhost:1234";
     }
     
+    if (shExpMatch(host, "(zomb02)")) {
+        return "SOCKS localhost:12302";
+    }
+    
     return "DIRECT";
 }
 
