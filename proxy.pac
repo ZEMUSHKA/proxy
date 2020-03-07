@@ -13,7 +13,7 @@ function FindProxyForURL(url, host) {
         return "SOCKS localhost:1234";
     }
     
-    if (shExpMatch(host, "(zomb02)")) {
+    if (shExpMatch(host, "(zomb02|zomb02.local|www.zomb02.local|www.zomb02)")) {
         return "SOCKS localhost:12302";
     }
     
