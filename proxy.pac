@@ -8,6 +8,10 @@ function FindProxyForURL(url, host) {
         return "SOCKS localhost:12302";
     }
     
+    if (dnsDomainIs(host, ".rutracker.org")) {
+        return "PROXY localhost:8080";
+    }
+
 //     if (shExpMatch(host, "(*.nnm-club.ws|*.nnmclub.to|nnmclub.to|nnm-club.me|rutracker.org|*.nnm-club.me|*.rutracker.org)")
 //         || shExpMatch(host, "(*.slideshare.net|*.slidesharecdn.com|*.linkedin.com)")
 //         || shExpMatch(host, "(*.telegram.*|telegram.*|*.telegram-store.com)")
