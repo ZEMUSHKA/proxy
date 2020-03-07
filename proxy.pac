@@ -13,11 +13,9 @@ function FindProxyForURL(url, host) {
         return "SOCKS localhost:1234";
     }
     
-    if (shExpMatch(host, "(zomb02|zomb02.local|www.zomb02.local|www.zomb02)")) {
-        return "SOCKS localhost:12302";
+    if (shExpMatch(host, "(zomb-clyo-gpu0-2|zomb-clyo-gpu0-2.zombie.yandex.net)")) {
+        return "PROXY localhost:12302";
     }
     
     return "DIRECT";
 }
-
-
