@@ -5,7 +5,7 @@ function FindProxyForURL(url, host) {
     }
     
     if (shExpMatch(host, "zomb02")) {
-        return "PROXY localhost:12302";
+        return "SOCKS localhost:12302";
     }
     
 //     if (shExpMatch(host, "(*.nnm-club.ws|*.nnmclub.to|nnmclub.to|nnm-club.me|rutracker.org|*.nnm-club.me|*.rutracker.org)")
