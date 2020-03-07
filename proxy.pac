@@ -1,14 +1,12 @@
 function FindProxyForURL(url, host) {
-
-    return "PROXY localhost:12302; DIRECT";
     
-//     if (shExpMatch(host, "(zian-nix|zian-nix.yandex.net)")) {
-//         return "SOCKS localhost:1234";
-//     }
+    if (shExpMatch(host, "zian-nix.yandex.net")) {
+        return "SOCKS localhost:1234";
+    }
     
-//     if (shExpMatch(host, "(zomb-clyo-gpu0-2|zomb-clyo-gpu0-2.zombie.yandex.net)")) {
-//         return "PROXY localhost:12302";
-//     }
+    if (shExpMatch(host, "zomb-clyo-gpu0-2.zombie.yandex.net")) {
+        return "PROXY localhost:12302";
+    }
     
 //     if (shExpMatch(host, "(*.nnm-club.ws|*.nnmclub.to|nnmclub.to|nnm-club.me|rutracker.org|*.nnm-club.me|*.rutracker.org)")
 //         || shExpMatch(host, "(*.slideshare.net|*.slidesharecdn.com|*.linkedin.com)")
@@ -19,5 +17,5 @@ function FindProxyForURL(url, host) {
 //         return "PROXY localhost:8080";
 //     }
     
-//     return "DIRECT";
+    return "DIRECT";
 }
