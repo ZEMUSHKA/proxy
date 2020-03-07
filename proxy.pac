@@ -8,7 +8,7 @@ function FindProxyForURL(url, host) {
         return "SOCKS localhost:12302";
     }
     
-    if (dnsDomainIs(host, ".rutracker.org") || dnsDomainIs(host, "rutracker.org")) {
+    if (shExpMatch(host, "*.rutracker.org") || shExpMatch(host, "rutracker.org")) {
         return "PROXY localhost:8080";
     }
 
