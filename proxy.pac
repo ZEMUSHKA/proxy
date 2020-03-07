@@ -12,11 +12,17 @@ function FindProxyForURL(url, host) {
         return "PROXY localhost:8080";
     }
     
+    // blocked on AWS :(
     if (shExpMatch(host, "nnm-club.to") || shExpMatch(host, "nnm-club.me") 
         || shExpMatch(host, "nnmclub.to") || shExpMatch(host, "nnmclub.me")) 
     {
         return "PROXY localhost:8080";
     }
+    
+    if (shExpMatch(host, "sci-hub.tw") || shExpMatch(host, "*.sci-hub.*")) {
+        return "PROXY localhost:8080";
+    }
+    
 
 //     if (shExpMatch(host, "(||nnm-club.me|||)")
 //         || shExpMatch(host, "(*.slideshare.net|*.slidesharecdn.com|*.linkedin.com)")
