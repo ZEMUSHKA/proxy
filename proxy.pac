@@ -12,8 +12,8 @@ function FindProxyForURL(url, host) {
         return "PROXY localhost:8080";
     }
     
-    if (shExpMatch(host, "*.nnmclub.to") || shExpMatch(host, "*.nnm-club.ws") || shExpMatch(host, "*.nnm-club.me")
-        || shExpMatch(host, "nnmclub.to") || shExpMatch(host, "nnm-club.ws") || shExpMatch(host, "nnm-club.me")) 
+    if (shExpMatch(host, "nnm-club.to") || shExpMatch(host, "nnm-club.me") 
+        || shExpMatch(host, "nnmclub.to") || shExpMatch(host, "nnmclub.me")) 
     {
         return "PROXY localhost:8080";
     }
