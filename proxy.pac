@@ -4,7 +4,7 @@ function FindProxyForURL(url, host) {
         return "SOCKS localhost:1234";
     }
     
-    if (shExpMatch(host, "zomb-clyo-gpu0-2.zombie.yandex.net")) {
+    if (shExpMatch(host, "zomb02")) {
         return "PROXY localhost:12302";
     }
     
