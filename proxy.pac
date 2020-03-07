@@ -19,19 +19,15 @@ function FindProxyForURL(url, host) {
         return "PROXY localhost:8080";
     }
     
-    if (shExpMatch(host, "sci-hub.tw") || shExpMatch(host, "*.sci-hub.*")) {
+    if (shExpMatch(host, "linkedin.com") || shExpMatch(host, "*.linkedin.com")) {
         return "PROXY localhost:8080";
     }
     
-
-//     if (shExpMatch(host, "(||nnm-club.me|||)")
-//         || shExpMatch(host, "(*.slideshare.net|*.slidesharecdn.com|*.linkedin.com)")
-//         || shExpMatch(host, "(*.telegram.*|telegram.*|*.telegram-store.com)")
-//         || shExpMatch(host, "(*.transloadit.com|transloadit.com)")
-//         || shExpMatch(host, "(*.sci-hub.*|sci-hub.tw)"))
-//     {
-//         return "PROXY localhost:8080";
-//     }
+    if (shExpMatch(host, "*.slideshare.net") || shExpMatch(host, "*.slidesharecdn.com") 
+        || shExpMatch(host, "slideshare.net")) 
+    {
+        return "PROXY localhost:8080";
+    }
     
     return "DIRECT";
 }
