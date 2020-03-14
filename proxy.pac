@@ -8,6 +8,10 @@ function FindProxyForURL(url, host) {
         return "SOCKS localhost:12302";
     }
     
+    if (shExpMatch(host, "zomb1")) {
+        return "SOCKS localhost:1231";
+    }
+    
     if (shExpMatch(host, "*.rutracker.org") || shExpMatch(host, "rutracker.org")) {
         return "PROXY localhost:8080";
     }
