@@ -33,5 +33,9 @@ function FindProxyForURL(url, host) {
         return "PROXY localhost:8080";
     }
     
+    if (shExpMatch(host, "kino.pub") || shExpMatch(host, "*.kino.pub")) {
+        return "PROXY localhost:8080";
+    }
+    
     return "DIRECT";
 }
