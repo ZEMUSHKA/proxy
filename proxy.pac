@@ -1,17 +1,5 @@
 function FindProxyForURL(url, host) {
     
-    if (shExpMatch(host, "zian-nix.yandex.net")) {
-        return "SOCKS localhost:1234";
-    }
-    
-    if (shExpMatch(host, "zomb02")) {
-        return "SOCKS localhost:12302";
-    }
-    
-    if (shExpMatch(host, "zomb1")) {
-        return "SOCKS localhost:1231";
-    }
-    
     if (shExpMatch(host, "*.rutracker.org") || shExpMatch(host, "rutracker.org")) {
         return "PROXY localhost:8080";
     }
@@ -34,6 +22,10 @@ function FindProxyForURL(url, host) {
     }
     
     if (shExpMatch(host, "kino.pub") || shExpMatch(host, "*.kino.pub")) {
+        return "PROXY localhost:8080";
+    }
+    
+    if (shExpMatch(host, "facebook.com") || shExpMatch(host, "*.facebook.com")) {
         return "PROXY localhost:8080";
     }
     
