@@ -1,8 +1,8 @@
 function FindProxyForURL(url, host) {
     
-//     if (shExpMatch(host, "*.rutracker.org") || shExpMatch(host, "rutracker.org")) {
-//         return "PROXY localhost:8080";
-//     }
+    if (shExpMatch(host, "*.rutracker.org") || shExpMatch(host, "rutracker.org")) {
+        return "PROXY localhost:8080";
+    }
     
     // blocked on AWS :(
     if (shExpMatch(host, "nnm-club.to") || shExpMatch(host, "nnm-club.me") 
