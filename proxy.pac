@@ -29,5 +29,9 @@ function FindProxyForURL(url, host) {
         return "PROXY localhost:8080";
     }
     
+    if (shExpMatch(host, "pornhub.com") || shExpMatch(host, "*.pornhub.com")) {
+        return "PROXY localhost:8080";
+    }
+    
     return "DIRECT";
 }
