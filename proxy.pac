@@ -33,5 +33,9 @@ function FindProxyForURL(url, host) {
         return "PROXY localhost:8080";
     }
     
+    if (shExpMatch(host, "phncdn.com") || shExpMatch(host, "*.phncdn.com")) {
+        return "PROXY localhost:8080";
+    }
+    
     return "DIRECT";
 }
