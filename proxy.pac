@@ -37,5 +37,9 @@ function FindProxyForURL(url, host) {
         return "PROXY localhost:8080";
     }
     
+    if (shExpMatch(host, "interactivebrokers.co.uk") || shExpMatch(host, "*.interactivebrokers.co.uk")) {
+        return "PROXY localhost:8080";
+    }
+    
     return "DIRECT";
 }
