@@ -3,7 +3,11 @@ function FindProxyForURL(url, host) {
     if (shExpMatch(host, "*.twitter.com") || shExpMatch(host, "twitter.com")) {
         return "PROXY localhost:8080";
     }
-    
+
+    if (shExpMatch(host, "*.twimg.com") || shExpMatch(host, "twimg.com")) {
+        return "PROXY localhost:8080";
+    }
+
     if (shExpMatch(host, "*.rutracker.org") || shExpMatch(host, "rutracker.org")) {
         return "PROXY localhost:8080";
     }
