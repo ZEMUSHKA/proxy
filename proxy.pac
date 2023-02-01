@@ -1,5 +1,9 @@
 function FindProxyForURL(url, host) {
     
+    if (shExpMatch(host, "*.media-amazon.com") || shExpMatch(host, "media-amazon.com")) {
+        return "SOCKS localhost:8888";
+    }
+    
     if (shExpMatch(host, "*.amazon.com") || shExpMatch(host, "amazon.com")) {
         return "SOCKS localhost:8888";
     }
