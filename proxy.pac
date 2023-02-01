@@ -1,5 +1,17 @@
 function FindProxyForURL(url, host) {
     
+    if (shExpMatch(host, "*.amazon.com") || shExpMatch(host, "amazon.com")) {
+        return "SOCKS localhost:8888";
+    }
+    
+    if (shExpMatch(host, "*.amazon.de") || shExpMatch(host, "amazon.de")) {
+        return "SOCKS localhost:8888";
+    }
+    
+    if (shExpMatch(host, "*.clarins.de") || shExpMatch(host, "clarins.de")) {
+        return "SOCKS localhost:8888";
+    }
+    
     if (shExpMatch(host, "*.twitter.com") || shExpMatch(host, "twitter.com")) {
         return "SOCKS localhost:8888";
     }
